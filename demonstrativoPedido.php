@@ -10,14 +10,15 @@
         die("Problemas de conexão com o banco de dados.<br> ".mysqli_connect_error());
     }
     
-    if(isset($_POST['nomeClientes']) && isset($_POST['telefone']) && isset($_POST['endereco']) && isset($_POST['nomeProduto']) && isset($_POST['quantidade'])){
+    if(isset($_POST['nomeClientes']) && isset($_POST['email']) && isset($_POST['telefone']) && isset($_POST['endereco']) && isset($_POST['nomeProduto']) && isset($_POST['quantidade'])){
         $nomeClientes = $_POST['nomeClientes'];
+        $email = $_POST['email'];
         $telefone = $_POST['telefone'];
         $endereco = $_POST['endereco'];
         $nomeProduto = $_POST['nomeProduto'];
         $quantidade = $_POST['quantidade'];
 
-        $sql = "insert into pedidos (nomeClientes, telefone, endereco, nomeProduto, quantidade) values ('$nomeClientes', '$telefone', '$endereco', '$nomeProduto', '$quantidade')";
+        $sql = "insert into pedidos (nomeClientes, telefone, endereco, nomeProduto, quantidade) values ('$nomeClientes', '$email', '$telefone', '$endereco', '$nomeProduto', '$quantidade')";
         $result = $conn->query($sql);  
         mysqli_close($conn);              
 }
@@ -52,6 +53,7 @@
     <?php
     echo "
     <strong>Nome:</strong> <em>$nomeClientes</em><br><br>
+    <strong>Email:</strong> <em>$email</em><br><br>
     <strong>Telefone:</strong> <em>$telefone</em><br><br>
     <strong>Endereço:</strong> <em>$endereco</em><br><br>
     <strong>Produto:</strong> <em>$nomeProduto</em><br><br>
