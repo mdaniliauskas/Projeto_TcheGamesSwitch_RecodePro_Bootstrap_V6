@@ -29,7 +29,7 @@ CREATE TABLE `comentarios` (
   `mensagem` varchar(500) DEFAULT NULL,
   `data` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`idComentarios`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,6 @@ CREATE TABLE `comentarios` (
 
 LOCK TABLES `comentarios` WRITE;
 /*!40000 ALTER TABLE `comentarios` DISABLE KEYS */;
-INSERT INTO `comentarios` VALUES (1,'Marcelo','marcelo@marcelo.com','Muito obrigado pela venda!\r\n\r\nSeguramente comprarei de novo!\r\n\r\nAtt.\r\n\r\nMarcelo','2020-11-03 20:32:59'),(2,'Telma','telma@telma.com','Ainda tem o Nintendo Switch Lite na cor Turquesa?\r\n\r\nObrigado,\r\n\r\nT.','2020-11-03 20:33:33'),(3,'Romulado','romulado@out.com','Vocês têm 3 Nintendo Switch cinzas no estoque?\r\n\r\nObrigado.\r\n\r\nR.','2020-11-03 20:34:51'),(4,'Rody','rody@rody.com','Adorei a compra, farei novamente!\r\n\r\n','2020-11-03 20:51:54');
 /*!40000 ALTER TABLE `comentarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,6 +52,7 @@ CREATE TABLE `pedidos` (
   `idpedidos` int NOT NULL AUTO_INCREMENT,
   `data` datetime DEFAULT CURRENT_TIMESTAMP,
   `nomeClientes` varchar(150) NOT NULL,
+  `email` varchar(150) DEFAULT NULL,
   `telefone` varchar(45) NOT NULL,
   `endereco` varchar(250) NOT NULL,
   `nomeProduto` varchar(150) NOT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE `pedidos` (
   `quantidade` int NOT NULL,
   `valorTotal` decimal(10,2) NOT NULL DEFAULT '0.00',
   PRIMARY KEY (`idpedidos`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Tabela de pedidos contendo: nome do cliente, data do pedido (automático), telefone, endereço, nome do produto, valor unitário, quantidade e valor total.';
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Tabela de pedidos contendo: nome do cliente, data do pedido (automático), telefone, endereço, nome do produto, valor unitário, quantidade e valor total.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +69,7 @@ CREATE TABLE `pedidos` (
 
 LOCK TABLES `pedidos` WRITE;
 /*!40000 ALTER TABLE `pedidos` DISABLE KEYS */;
-INSERT INTO `pedidos` VALUES (1,'2020-11-03 20:31:32','Maya','111111','R. das Verbenas, 2000. Bela-Vista. São Paulo','Nintendo Lite Turquesa',0.00,1,0.00),(2,'2020-11-03 20:32:19','Marcelo','333333','R. das Camélias, 23. Centro. São Paulo.','Nintendo Vermelho e Azul',0.00,3,0.00),(3,'2020-11-03 20:37:14','Andrade','2222222','R. dos Andrades, 222. Centro. São Paulo','Mario Kart',0.00,5,0.00),(4,'2020-11-03 20:51:19','Rosy','88888','R. Rosy, 202. Rio de Janeiro.','Nintendo Switch Lite Amarelo',0.00,3,0.00);
+INSERT INTO `pedidos` VALUES (1,'2020-11-08 20:01:03','','','','','',0.00,0,0.00),(2,'2020-11-08 20:02:10','','','','','',0.00,0,0.00),(3,'2020-11-08 20:02:50','','','','','',0.00,0,0.00),(4,'2020-11-08 20:03:33','','','','','',0.00,0,0.00),(5,'2020-11-08 20:03:47','','','','','',0.00,0,0.00),(6,'2020-11-08 20:04:03','','','','','',0.00,0,0.00),(7,'2020-11-08 20:13:43','','','','','',0.00,0,0.00),(8,'2020-11-08 20:15:22','','','','','',0.00,0,0.00),(9,'2020-11-08 20:15:25','','','','','',0.00,0,0.00),(10,'2020-11-08 20:16:15','','','','','',0.00,0,0.00);
 /*!40000 ALTER TABLE `pedidos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -120,4 +120,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-03 21:41:53
+-- Dump completed on 2020-11-09  0:05:22

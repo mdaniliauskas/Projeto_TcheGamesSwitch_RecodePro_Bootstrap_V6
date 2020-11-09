@@ -1,14 +1,6 @@
 
 header {
-    width: 100%;
-    position: fixed;
-    background-color: black;
-    border: none;
-    padding: 0%;
-    margin-top: -0.5em;
-    left: 0%;
-    right: 0%;
-    margin-bottom: -1em;     
+    
 }
 
 
@@ -33,31 +25,26 @@ a {
     color: red;
     text-decoration: none;
 }
-
-
-h30{
-    color: royalblue;
-}
-
-
-h3 {
-    color: red;
-}
          
 
 li {
-    list-style: none;  
+    list-style: none; 
+    color: red; 
 }
 
-.centralizado {
-    text-align: center; 
+.navbarAhover > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #FFFF00;
+    color: #FFC0CB;
 }
 
 .listaProdutos {
-   padding: 30px 30px 30px 30px;
-   display: inline-block; 
+   display: inline-table;
    
 }
+
+.nav-link li a {
+    color:red
+    }
 
 .precoDesconto {
     text-decoration: line-through;
@@ -71,17 +58,11 @@ li {
 
 
 #contatos {
-    display: inline-table;
-    width: 30%;
+    
 }
 
 #menuLateral {
-    position: fixed;
-    height: 100%;
-    width: 20%;
-    font-family: "Open Sans", sans-serif;
-    font-size: 18px;
-    color: royalblue;          
+          
 }
 
 li#menuLateral:hover {
@@ -94,21 +75,17 @@ li#menuLateral:hover {
 }
 
 ul#menuSuperior {
-    padding-left: 5px;
+    
 }
 
 li#menuSuperior {
     
-    vertical-align: middle;
-    float: inline-start;
-    text-align: center;  
+  
      
 }
 
 #vitrineIndex {
-    display: inline-table;
-    width: 20%;
-    padding: 50px;    
+     
     
 }
 

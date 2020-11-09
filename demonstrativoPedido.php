@@ -18,7 +18,7 @@
         $nomeProduto = $_POST['nomeProduto'];
         $quantidade = $_POST['quantidade'];
 
-        $sql = "insert into pedidos (nomeClientes, telefone, endereco, nomeProduto, quantidade) values ('$nomeClientes', '$email', '$telefone', '$endereco', '$nomeProduto', '$quantidade')";
+        $sql = "insert into pedidos (nomeClientes, email, telefone, endereco, nomeProduto, quantidade) values ('$nomeClientes', '$email', '$telefone', '$endereco', '$nomeProduto', '$quantidade')";
         $result = $conn->query($sql);  
         mysqli_close($conn);              
 }
@@ -45,25 +45,31 @@
 
 
     <main>
-    <h2>Demonstrativo do pedido</h2>   
+        
+        <div class="container mx-auto">
             
-            <hr width="50%">
-            <br><br><br><br>
+            <h2 class="text-danger">Demonstrativo do pedido</h2>   
+                    
+            <br><br>
 
-    <?php
-    echo "
-    <strong>Nome:</strong> <em>$nomeClientes</em><br><br>
-    <strong>Email:</strong> <em>$email</em><br><br>
-    <strong>Telefone:</strong> <em>$telefone</em><br><br>
-    <strong>Endereço:</strong> <em>$endereco</em><br><br>
-    <strong>Produto:</strong> <em>$nomeProduto</em><br><br>
-    <strong>Quantidade:</strong> <em>$quantidade</em><br><br>
-    ";    
-    ?>
-
-    <br><br>
-    
-    <a href="./pedidos.php"><input type="button" value="Voltar Pedidos"></a>
+            
+            <?php
+            echo "
+            <strong>Nome:</strong> <em>$nomeClientes</em><br><br>
+            <strong>Email:</strong> <em>$email</em><br><br>
+            <strong>Telefone:</strong> <em>$telefone</em><br><br>
+            <strong>Endereço:</strong> <em>$endereco</em><br><br>
+            <strong>Produto:</strong> <em>$nomeProduto</em><br><br>
+            <strong>Quantidade:</strong> <em>$quantidade</em><br><br>
+            ";    
+            ?>
+            
+            <br><br>
+            
+            <a href="./pedidos.php"><button type="button" class="btn btn-primary">Voltar Pedidos</button></a>
+               
+        <div>
+        
     </main>
 
     

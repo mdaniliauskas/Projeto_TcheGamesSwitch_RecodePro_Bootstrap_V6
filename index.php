@@ -20,9 +20,9 @@
 
     <main>
     
-    <div class="container-fluid">
+    <div class="container mx-auto">
         <div>
-            <h2>Seja bem-vindo(a)!</h2>
+            <h2 class="text-danger">Seja bem-vindo(a)!</h2>
             
             <hr width="50%">
             <br>
@@ -35,24 +35,14 @@
             <br><br><br><br>
         </div>
 
-        <div>
+        
     
-        <div>
-            <a href="./produtos.php">
-                <ul>
-                    <li id="vitrineIndex">
-                        <img src="./img/produtos/Consoles/Switch_Azul_Vermelho.jpg" alt="Console" width="250px">
-                    </li>
-                    <li id="vitrineIndex">
-                        <img src="./img/produtos/Acessorios/Organizador Jogos.jpg" alt="Jogos" width="200px">
-                    </li>
-                    <li id="vitrineIndex">
-                        <img src="./img/produtos/Acessorios/Pelicula.jpg" alt="Acessórios" width="200px">
-                    </li id="vitrineIndex">
-                    <li>
-                        <img src="./img/produtos/Acessorios/Charging Dock.jpg" alt="Acessórios" width="200px">
-                    </li>
-                </ul>
+        <div class="text-center">
+            <a href="./produtos.php">                
+                <img src="./img/produtos/Consoles/Switch_Azul_Vermelho.jpg" alt="Console" width="250px">                   
+                <img src="./img/produtos/Acessorios/Organizador Jogos.jpg" alt="Jogos" width="200px">                    
+                <img src="./img/produtos/Acessorios/Pelicula.jpg" alt="Acessórios" width="200px">                    
+                <img src="./img/produtos/Acessorios/Charging Dock.jpg" alt="Acessórios" width="200px">                  
             </a>    
         </div>    
     

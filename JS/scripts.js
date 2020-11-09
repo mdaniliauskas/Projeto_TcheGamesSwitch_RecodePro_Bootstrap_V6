@@ -7,7 +7,7 @@ function exibirCategoria(categoria){
 
         if(categoria == produtos[i].id)
             
-            produtos[i].style = "display: inline";       
+            produtos[i].style = "display: inline-table";       
 
         else
 
@@ -22,7 +22,7 @@ let exibirTodos = () => {
 
     for(i = 0; i < produtos.length; i++){
         
-        produtos[i].style = "display: inline-table;";
+        produtos[i].style = "display: inline-table";
     }   
 }
 

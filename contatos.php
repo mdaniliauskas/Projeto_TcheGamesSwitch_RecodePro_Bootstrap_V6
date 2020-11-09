@@ -31,7 +31,7 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>Contato - Tche Games Switch</title>
+    <title>Contatos - Tche Games Switch</title>
     <link rel="stylesheet" href="./CSS/estilos.css">
 
 </head>
@@ -47,58 +47,55 @@
 
     
     <main>
+        <div class="container mx-auto">                
+            <h2 class="text-danger">Nossos contatos</h2>   
+            <br>
+            
+            <p>Não hesite em nos Conctactar! Envie sua dúvida, elogio ou reclamação!</p>
+            <br><br><br><br>
 
-        <h2>Nossos contatos</h2>   
-        
-        <hr width="50%">
-        <br>
-        
-        <p>Não hesite em nos Conctactar! Envie sua dúvida, elogio ou reclamação!</p>
-        <br>
-
-        <div>
-            <ul>
-                <li id="contatos">
+            <div class="row text-center">
+                <div class="col" id="contatos">
                     <a href="mailto: atendimento@tchegames.com.br">
-                        <img src="./img/logos/Email_logo.jpg" alt="Email" width="100px"><br>
-                        atendimento@tchegames.com.br
+                    <img src="./img/logos/Email_logo.jpg" alt="Email" width="100px"><br>
+                    atendimento@tchegames.com.br
                     </a>
-                </li>
-                <li id="contatos">
+                </div>
+                <div class="col" id="contatos">                
                     <a href="tel:0800-000000">
                         <img src="./img/logos/Whats_logo.jpg" alt="Whats_logo" width="100px"><br>
                         0800-000000
-                    </a>
-                </li>
-                <li id="contatos">
+                    </a>                    
+                </div>
+                <div class="col" id="contatos">        
                     <a href="#Chat">
                         <img src="./img/logos/Teleatendimento_logo.jpg" alt="Chat" width="100px"><br>
                         Atendimento por chat
                     </a>
-                </li>
-            </ul>
-        </div>    
-        <br>
-
-        <hr width="50%">
-        <br>
+                </div>
+            </div>
+        <br><br><br><br>
     
-        Se preferir, envie-nos uma mensagem logo abaixo:
-        <br><br>
-
-        <form method="post" action="">
-            <h4>Seu nome:</h4>
-            <input type="text" name="nome" style="width: 400px;">
+        <div class="container mx-auto">
+            Se preferir, envie-nos uma mensagem logo abaixo:
             <br><br>
 
-            <h4>Seu email:</h4>
-            <input type="text" name="email" style="width: 400px;">
-            <br><br>
+            <form method="post" action="">
+                <h4 class="text-primary">Nome</h4>
+                <input type="text" name="nome" style="width: 400px;" placeholder="Nome completo">
+                <br><br>
 
-            <h4>Mensagem:</h4>
-            <textarea name="mensagem" style="width: 400px; height: 400px;"></textarea><br>
-            <input type="submit" value="Enviar">
-        </form>
+                <h4 class="text-primary">Email</h4>
+                <input type="text" name="email" style="width: 400px;" placeholder="digite seu email">
+                <br><br>
+
+                <h4 class="text-primary">Mensagem</h4>
+                <textarea name="mensagem" style="width: 400px; height: 400px;" placeholder="Digite aqui sua mensagem, responderemos o mais breve possível."></textarea><br>
+                
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                
+            </form>
+        <div> 
 
     </main>
 
