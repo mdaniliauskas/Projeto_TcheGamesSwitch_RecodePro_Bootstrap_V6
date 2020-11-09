@@ -20,7 +20,7 @@
     </header>
     <br><br><br><br><br><br><br><br>
     
-    
+    <!--
     <nav id="menuLateral">
             
         <h3>Categorias</h3>        
@@ -33,13 +33,40 @@
         </ul>                  
     
     </nav>    
+    -->
 
-
-    <main id="margemLateralProdutos">
-
-      
+    <div class="conteiner">
+        <div class="row sidebar-sticky">
+        <nav class="col-md-2 d-md-block sidebar">
+            <div class="sidebar-sticky">
+                <h5 class="d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-danger">
+                Categorias             
+                </h5><br> 
+                <ul class="nav flex-column mb-2">
+                <li class="nav-item text-primary" onclick="exibirTodos()">
+                    Todos
+                </li>                  
+                <li class="nav-item text-primary" onclick="exibirCategoria('consoles')">
+                    Consoles
+                </li>
+                <li class="nav-item text-primary" onclick="exibirCategoria('jogos')">
+                    Jogos
+                </li>
+                <li class="nav-item text-primary" onclick="exibirCategoria('acessorios')">
+                    Acessórios
+                </li>
+       
+                              
+                </ul>
+            </div>
+        </nav>
+    
         
-        <h2>Nossos produtos</h2>
+
+        <main class="col-md-10">
+          
+           
+        <h2 class="text-danger">Nossos produtos</h2>
     
         <hr width="50%">
         <br><br>
@@ -65,22 +92,17 @@
                 If ($result->num_rows >0) {
                     while($rows = $result->fetch_assoc()){                        
             ?>
-        <div class="container d-inline p-2">
         
-        <div class="container d-inline ">        
-            <ul>
-                <li class="listaProdutos" id="<?php echo $rows["categoria"]; ?>">
-                    <img src="<?php echo $rows["imagem"]; ?>" alt="" width="120px" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
-                    <br>
-                    <?php echo $rows["descricao"]; ?>
-                    <hr>
-                    <p class="precoDesconto"><?php echo $rows["precoCheio"]; ?></p>
-                    <p class="precoFinal"><?php echo $rows["precoDesconto"]; ?></p>
-                </li>
-            </ul>                
-        </div>
+            
+            <div class="listaProdutos text-center" id="<?php echo $rows["categoria"]; ?>">        
+                <img src="<?php echo $rows["imagem"]; ?>" alt="" width="120px" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+                <br>
+                <?php echo $rows["descricao"]; ?>
+                <p class="precoDesconto"><?php echo $rows["precoCheio"]; ?></p>
+                <p class="precoFinal"><?php echo $rows["precoDesconto"]; ?></p>
+            </div>
        
-        <div>        
+               
 
 
             <?php
@@ -90,9 +112,9 @@
                 }
             ?>
 
-        </div>        
-
-    </main>       
+        </div>       
+            </main>
+           
   
 
     <footer>
